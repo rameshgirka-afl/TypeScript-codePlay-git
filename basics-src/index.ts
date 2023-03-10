@@ -7,7 +7,12 @@ function safeMethod(input_param: any ){
 
 }
 
-// Arrays 
+// Arrays - variable 
+let numberArray: number[] = [1,2,2,3,3,5]
+// values inside array or now only number Type. 
+//back comptiable any Array 
+let anyArray: any[] = ['1',true,new Number(100),101,undefined,null]
+
 
 
 
