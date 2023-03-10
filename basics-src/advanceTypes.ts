@@ -58,7 +58,15 @@ function accomodate_null_Undefined(...inputParam: number[] | null[] | undefined[
 
 }
 
+type Customer = {
+    id?: number,
+    birthday: Date
+}
 //accomodate_null_Undefined([10,null,undefined])
+function getCustomer(id: number): Customer |null | undefined {
+    return id === 0 ? null : {birthday : new Date()};
+}
+let customer = getCustomer(0)
 
 
 
