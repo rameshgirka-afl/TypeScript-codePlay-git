@@ -12,7 +12,7 @@ numberArray.forEach(n => n.toLocaleString());
 //back comptiable any Array 
 let anyArray = ['1', true, new Number(100), 101, undefined, null];
 // Tuples  - Type Scipt data Type:: 
-let user = [1, "Ramesh",]; //cant hold more than 2 elememts: Fixed size array is tuple. 
+let User = [1, "Ramesh",]; //cant hold more than 2 elememts: Fixed size array is tuple. 
 // Enums - Type Script data Type: List of related CONSTANTS small= S, medium = M, large = L 
 const small = 'S';
 const medium = 'M';
@@ -27,7 +27,7 @@ var Size;
 let mySize = Size.XtraLarge;
 console.dir(mySize);
 // functions 
-function noUnused_Params_Demo(paramName, kwarg1) {
+function noUnused_Params_Demo(paramName, kwarg1, default_arg = 11) {
     //default noUnusedParameters: false - hence no complains. 
     // expecting arguments: 1 - strict list of args. 
     //noUnusedLocals - unused variables alert. && Declared but never used. 
@@ -48,4 +48,9 @@ function noUnused_Params_Demo(paramName, kwarg1) {
 // use function with out kwarg1
 noUnused_Params_Demo(false, 11);
 noUnused_Params_Demo(false);
-//Objects 
+//Objects - shape is "Dynamic " && INFERRED
+let user;
+// 1. assign user with some initial values. 
+user = { id: 1001, caste: 'BullShit', name: 'Ramesh', cart: [] };
+user.cart = ['item1', 'item2'];
+console.dir(user);

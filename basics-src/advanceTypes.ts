@@ -58,7 +58,7 @@ function accomodate_null_Undefined(...inputParam: number[] | null[] | undefined[
 
 }
 
-accomodate_null_Undefined([10,null,undefined])
+//accomodate_null_Undefined([10,null,undefined])
 
 
 

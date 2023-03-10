@@ -19,7 +19,7 @@ let anyArray: any[] = ['1',true,new Number(100),101,undefined,null]
 
 
 // Tuples  - Type Scipt data Type:: 
-let user: [number, string] = [1, "Ramesh",]  //cant hold more than 2 elememts: Fixed size array is tuple. 
+let User: [number, string] = [1, "Ramesh",]  //cant hold more than 2 elememts: Fixed size array is tuple. 
 
 
 // Enums - Type Script data Type: List of related CONSTANTS small= S, medium = M, large = L 
@@ -39,7 +39,7 @@ console.dir(mySize)
 
 // functions 
 
-function noUnused_Params_Demo (paramName: boolean, kwarg1?: number): string|number {
+function noUnused_Params_Demo (paramName: boolean, kwarg1?: number,default_arg =11): string|number {
     //default noUnusedParameters: false - hence no complains. 
     // expecting arguments: 1 - strict list of args. 
 
@@ -70,4 +70,21 @@ noUnused_Params_Demo(false,11)
 noUnused_Params_Demo(false)
 
 
-//Objects 
+//Objects - shape is "Dynamic " && INFERRED
+
+let user: {
+    id: number,
+    caste?: string,
+    name:string,
+    cart: Object,
+    //inputParam TYPE || logic || 
+    funcName:(inputParam: Date) => void;
+}
+
+// 1. assign user with some initial values. - CAN't SKIP 
+user = {id: 1001,caste:'BullShit', name:'Ramesh', cart:[],funcName:(date: Date) => console.log(date) }
+
+user.cart = ['item1','item2']
+
+console.dir(user)
+
